@@ -1,0 +1,263 @@
+/* dark #222222, light #f4f7fa 
+roxo imagem #c281e4 amarelo imagem #feb332*/
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+:root {
+  --bg-color: #222222;
+  --fnt-color: #f4f7fa;
+  --sec-bg-color: #26192d;
+  --link-color: #feb332;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fnt-color);
+}
+
+p {
+  padding: 10px;
+}
+
+nav {
+  position:fixed;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 15vw;
+  background-color: var(--bg-color);
+  z-index: 2;
+}
+
+header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+}
+
+h2 {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--fnt-color);
+  padding: 0 1.5rem;
+}
+
+nav a:hover {
+  color: var(--fnt-color);
+  transition: 0.3s;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  height: 30px;
+  width: 100px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 400ms ease-in-out 0s;
+}
+
+#home{
+  height: 100vh;
+}
+
+#sobre {
+  width: 100%;
+  height: 100%;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--sec-bg-color);
+}
+
+form {
+  display: flex;
+  background-color: var(--bg-color);
+  align-self: center;
+  height: 100vh;
+  padding: 10vh 30vw;
+}
+
+input,
+select,
+textarea {
+  width: 40vw;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 95vh;
+  padding: 3rem 15vw;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0rem 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-image {
+  width: 90%;
+  height: 80%;
+}
+
+#form-button {
+  margin: 30px auto;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: var(--bg-color);
+  background: var(--link-color);
+  cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+  max-width: 200px;
+}
+
+#form-button:hover {
+  background: #fff;
+  color: #222222;
+  transition: 0.3s;
+}
+
+#CTA-button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: var(--bg-color);
+  background: var(--fnt-color);
+  cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+#CTA-button:hover {
+  background: var(--link-color);
+  transition: 0.3s;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.card {
+  height: 300px;
+  width: 400px;
+  margin: 3rem 0 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#calculator {
+  background-image: url("../images/calculator.png");
+}
+
+#drum-machine {
+  background-image: url("../images/drum-machine.png");
+}
+
+
+#pomodoro-timer {
+  background-image: url("../images/pomodoro-timer.png");
+}
+
+#memory-game {
+  background-image: url("../images/memory-game.png");
+}
+
+.card-text {
+  width: 40%;
+  letter-spacing: 2px;
+  color: whitesmoke;
+}
+
+.card-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: block;
+  border: 1px solid black;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  filter: unset;
+}
+
+.card:hover > .card-wrapper::before {
+  height: 250px;
+  width: 350px;
+  opacity: 1;
+}
+
+
